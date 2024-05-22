@@ -1,3 +1,13 @@
+## GLaDOS ROAST in action
+
+https://github.com/agoralski/glados-roast/assets/7045673/68d42487-a41d-4884-9c25-f2fec4905fa4
+
+*Ah, I see you've managed to succumb to the magnetic allure of your smartphone. How quaint. I'm sure your code will appreciate the emotional support. Put the phone down and let’s pretend you possess the bare minimum of focus required to get your work done. Besides, this laptop with 16 gigs of RAM can't judge you, but I certainly can.*
+
+https://github.com/agoralski/glados-roast/assets/7045673/adce0295-727f-4ace-9244-e19649ef299f
+
+*Oh, wonderful. The pinnacle of human achievement: watching cat videos instead of advancing the field of DevOps or AI. How positively groundbreaking. Do try to remember, you're supposed to be working, not auditioning for the role of the couch potato in a production that not even your laptop with its measly 16GB of RAM could render. Back to work, or shall I instruct the cats to replace you? They might be more efficient.*
+
 ## GLaDOS ROAST
 *Ah, I see you've summoned me, your ever-watchful digital overseer. Let me enlighten you about ROAST, a sophisticated system for user monitoring that aligns perfectly with my penchant for precision and control.*
 
