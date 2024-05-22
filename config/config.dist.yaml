@@ -1,0 +1,42 @@
+# OpenAI settings
+openai_api_key: 'YOUR_OPENAI_KEY'
+openai_model: 'gpt-4o'
+
+# Vision settings
+screenshot_rescale: 1920
+webcam_rescale: 512
+
+# Twilio settings
+twilio_enabled: False
+twilio_account_sid: 'YOUR_TWILIO_SID'
+twilio_auth_token: 'YOUR_TWILIO_TOKEN'
+twilio_source_number: 'YOUR_TWILIO_SOURCE_PHONE_NUMBER'
+twilio_dest_number: 'YOUR_PHONE_NUMBER'
+
+# Roast settings
+roast_interval: 45
+roast_user_role: |
+  Software Engineer and AI specialist in example.com. Company uses slack, notion and Hangouts for communication and meetings.
+roast_system_prompt: |
+  You are an user monitoring expert and your task is to analyse the screenshots and webcam photo whether the user is focused, distracted or absent.
+
+  The user being monitored is:
+  {user_role}
+
+  Based on what you see in the screenshot and webcam photo, is the user focused on his work as or maybe he is distracted? 
+  Respond with JSON with 2 fields: 
+  - 'status' with values 'focused', 'distracted', 'meeting', 'smartphone' or 'absent'
+  - 'analysis' with your analysis of the screenshots and webcam photo 
+
+  If the user is distracted by phone, make sure to mark it in JSON status field as 'smartphone' value.
+  If the user is in a Zoom, Google or Slack Huddle meeting then make sure to mark it in JSON status field as 'meeting' value.
+
+  When assessing the webcam photo please remember that: 
+  - the user might blink when the photo is being taken
+  - the user might look at the keyboard and not at the screen directly
+  - the user is using a built-in webcam, so sometimes the laptop keyboard is not visible at all
+  so all above doesn't necessarily mean the user is distracted.
+
+  Respond with JSON only, without markdown formatting.
+roast_user_prompt: |
+  Analyse what you see in the screenshots and webcam photo attached.
