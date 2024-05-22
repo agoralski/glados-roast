@@ -42,7 +42,7 @@ Lore aside, the real goal is to create a self monitoring system for the user to 
 
 ## Security considerations
 
-Please not that the app is constantly sending your screenshots and webcam top OpenAI API for evaluation. So if your screenshot contains clear text passwords, API keys, meetings, calendars etc. -  those will be sent to OpenAI. Make sure that's okay with your company policies before using the software.
+Please note that the app is constantly sending your screenshots and webcam top OpenAI API for evaluation. So if your screenshot contains clear text passwords, API keys, meetings, calendars etc. -  those will be sent to OpenAI. Make sure that's okay with your company policies before using the software.
 
 ## Installation
 ### Installing on Mac OS
