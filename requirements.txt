@@ -1,0 +1,16 @@
+openai==0.27.0
+opencv-python
+twilio
+onnxruntime
+numpy
+sounddevice
+levenshtein
+loguru
+jinja2
+requests
+pyyaml
+psutil
+mss
+schedule
+Pillow
+pync
