@@ -2,7 +2,9 @@ from setuptools import setup
 
 APP = ['roast.py']
 DATA_FILES = [
-    ('models', ['models/glados.onnx'])
+    ('models', ['models/glados.onnx']),
+    ('config', ['config/config.yaml']),
+    ('cores', ['cores/glados.yaml'])
     ]
 
 OPTIONS = {

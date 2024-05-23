@@ -6,6 +6,9 @@ openai_model: 'gpt-4o'
 screenshot_rescale: 1920
 webcam_rescale: 512
 
+# Audio settings
+save_generated_audio: False
+
 # Twilio settings
 twilio_enabled: False
 twilio_account_sid: 'YOUR_TWILIO_SID'
