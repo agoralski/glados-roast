@@ -9,13 +9,17 @@ import yaml
 import openai
 import json
 import argparse
+
 import sounddevice as sd
+import soundfile as sf
 
 from PIL import Image
 from pync import Notifier
 from twilio.rest import Client
 from glados import tts
 from pathlib import Path
+from datetime import datetime
+
 
 def rescale_image(image, max_size):
     # Rescale the image to have the longest edge equal to max_size
@@ -70,11 +74,20 @@ def encode_image_to_base64(image_path):
         base64_image = base64.b64encode(image_file.read()).decode('utf-8')
     return base64_image
 
-# Function to translate text to audio
+# Function to translate text to audio and save it as a wav file
 def text_to_audio(text):
+    now = datetime.now()
     audio = _tts.generate_speech_audio(text)
+
+    if config_data['save_generated_audio']:
+        date_time = now.strftime("%Y-%m-%d-%H-%M-%S")
+        audio_filename = f"{date_time}-glados-response.wav"
+        sf.write(audio_filename, audio, tts.RATE)
+
     print(f"GLaDOS text: {text}")
     sd.play(audio, tts.RATE)
+    sd.wait()  # Wait until the audio is finished playing
+    return 
 
 # Function to send images to OpenAI API with user-defined prompt
 def send_images_to_openai(image_paths, system_prompt, user_prompt, model):
@@ -142,8 +155,8 @@ def roast_user(status, analysis, roast_prompt):
             voice_response = openai.ChatCompletion.create(model=model, messages=voice_payload["messages"])
             response_text = voice_response["choices"][0]["message"]["content"]
 
-            text_to_audio(response_text)
             Notifier.notify(response_text, title="GLaDOS Alert")
+            text_to_audio(response_text)
 
         if status == 'smartphone' and config_data['twilio_enabled']:
             client = Client(config_data['twilio_account_sid'], config_data['twilio_auth_token'])
