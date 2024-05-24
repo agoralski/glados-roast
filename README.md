@@ -1,4 +1,4 @@
-![glados_roast](https://github.com/agoralski/glados-roast/assets/7045673/8e07118d-69a1-4591-a750-964cb6a408ae)
+![glados_banner](https://github.com/agoralski/glados-roast/assets/7045673/0bd7e294-dfb6-40b4-ad87-216afe96f151)
 
 
 ## GLaDOS ROAST in action
